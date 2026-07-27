@@ -4,9 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Thiệp cưới online - Trân trọng kính mời quý khách đến chung vui cùng gia đình chúng tôi." />
-  <title>Hoàng Minh & Mai Chi — Thiệp Cưới</title>
+  <title>Lê Minh & Chi Pu — Thiệp Cưới</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -16,83 +15,137 @@
 </head>
 <body>
 
-  <!-- ===== Nhạc nền ===== -->
-  <!-- Đặt file nhạc tên "music.mp3" cùng thư mục để bật nhạc nền -->
-  <audio id="bgMusic" loop preload="none">
-    <source src="music.mp3" type="audio/mpeg" />
-  </audio>
-  <button class="music-btn" id="musicBtn" aria-label="Bật/tắt nhạc" title="Bật/tắt nhạc">
-    <span class="music-ico">♪</span>
-  </button>
+  <!-- Nhạc nền: đặt file music.mp3 cùng thư mục -->
+  <audio id="bgMusic" loop preload="none"><source src="music.mp3" type="audio/mpeg" /></audio>
+  <button class="music-btn" id="musicBtn" aria-label="Bật/tắt nhạc" title="Bật/tắt nhạc"><span class="music-ico">♪</span></button>
 
-  <!-- Hiệu ứng cánh hoa rơi -->
   <div class="petals" id="petals" aria-hidden="true"></div>
 
-  <!-- ===== 1. COVER / HERO ===== -->
-  <section class="cover" id="top">
+  <!-- ===== 1. HEADER / COVER ===== -->
+  <header class="cover" id="top">
     <div class="cover-frame">
-      <p class="cover-pre reveal">Save the Date</p>
+      <p class="cover-pre reveal">Wedding Invitation</p>
       <h1 class="cover-names reveal">
-        <span>Hoàng&nbsp;Minh</span>
+        <span>Lê&nbsp;Minh</span>
         <span class="amp">&amp;</span>
-        <span>Mai&nbsp;Chi</span>
+        <span>Chi&nbsp;Pu</span>
       </h1>
       <div class="cover-line reveal"></div>
-      <p class="cover-date reveal" id="coverDate">05 . 12 . 2025</p>
-      <p class="cover-sub reveal">Trân trọng kính mời bạn đến chung vui cùng chúng tôi</p>
+      <p class="cover-date reveal">05 . 12 . 2025</p>
+      <p class="cover-sub reveal">Save the Date</p>
       <a href="#thongbao" class="scroll-hint reveal" aria-label="Cuộn xuống">˅</a>
     </div>
-  </section>
+  </header>
 
-  <!-- ===== 2. THÔNG BÁO HAI HỌ ===== -->
+  <!-- ===== 2. TRÂN TRỌNG THÔNG BÁO ===== -->
   <section class="section announce" id="thongbao">
     <div class="wrap">
-      <span class="script-title reveal">Trân trọng báo tin</span>
+      <span class="script-title reveal">Trân Trọng Thông Báo</span>
       <div class="families">
         <div class="family reveal">
           <h3>NHÀ TRAI</h3>
           <p class="fam-name">Ông &amp; Bà</p>
-          <p>Nguyễn Văn A</p>
-          <p>Trần Thị B</p>
+          <p>Lê Văn ......</p>
+          <p>Trần Thị ......</p>
           <p class="fam-addr">Mai Dịch, Cầu Giấy, Hà Nội</p>
         </div>
         <div class="family-heart reveal">💗</div>
         <div class="family reveal">
           <h3>NHÀ GÁI</h3>
           <p class="fam-name">Ông &amp; Bà</p>
-          <p>Lê Văn C</p>
-          <p>Phạm Thị D</p>
+          <p>Nguyễn Văn ......</p>
+          <p>Phạm Thị ......</p>
           <p class="fam-addr">Quận 12, TP. Hồ Chí Minh</p>
         </div>
       </div>
-      <p class="announce-text reveal">
-        Chúng tôi hân hạnh báo tin lễ thành hôn của hai con chúng tôi
-      </p>
+      <p class="announce-text reveal">Trân trọng báo tin lễ thành hôn của hai con chúng tôi</p>
     </div>
   </section>
 
   <!-- ===== 3. CÔ DÂU & CHÚ RỂ ===== -->
   <section class="section couple">
     <div class="wrap">
-      <span class="script-title reveal">Cô dâu &amp; Chú rể</span>
       <div class="couple-grid">
         <div class="person reveal">
-          <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=60')"></div>
-          <h3>Hoàng Minh</h3>
+          <div class="photo placeholder" aria-label="Ảnh chú rể"></div>
           <p class="role">Chú rể</p>
-          <p class="bio">Con trai Ông Nguyễn Văn A &amp; Bà Trần Thị B.</p>
+          <h3>Lê Hoàng Minh</h3>
         </div>
+        <div class="couple-amp reveal">And</div>
         <div class="person reveal">
-          <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=800&q=60')"></div>
-          <h3>Mai Chi</h3>
+          <div class="photo placeholder" aria-label="Ảnh cô dâu"></div>
           <p class="role">Cô dâu</p>
-          <p class="bio">Con gái Ông Lê Văn C &amp; Bà Phạm Thị D.</p>
+          <h3>Nguyễn Mai Chi</h3>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== 4. ĐẾM NGƯỢC ===== -->
+  <!-- ===== 4. EVENT DETAILS (2 lễ) ===== -->
+  <section class="section events" id="sukien">
+    <div class="wrap">
+      <span class="script-title reveal">Sự kiện cưới</span>
+      <div class="event-grid two">
+        <div class="event-card featured reveal">
+          <h3>Lễ Thành Hôn</h3>
+          <p class="ev-at">Tư gia nhà trai</p>
+          <div class="event-time">
+            <span class="ev-hour">09:30</span>
+            <span class="ev-day">Thứ Hai</span>
+            <span class="ev-date">05 . 12 . 2025</span>
+          </div>
+          <p class="ev-addr">Mai Dịch, Cầu Giấy, Hà Nội</p>
+          <a class="ev-map" href="https://maps.google.com/?q=Mai+Dich+Cau+Giay+Ha+Noi" target="_blank" rel="noopener">📍 Xem bản đồ</a>
+        </div>
+        <div class="event-card reveal">
+          <h3>Lễ Vu Quy</h3>
+          <p class="ev-at">Tư gia nhà gái</p>
+          <div class="event-time">
+            <span class="ev-hour">12:00</span>
+            <span class="ev-day">Chủ Nhật</span>
+            <span class="ev-date">11 . 01 . 2026</span>
+          </div>
+          <p class="ev-addr">Quận 12, TP. Hồ Chí Minh</p>
+          <a class="ev-map" href="https://maps.google.com/?q=Quan+12+Ho+Chi+Minh" target="_blank" rel="noopener">📍 Xem bản đồ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. OUR STORY ===== -->
+  <section class="section story">
+    <div class="wrap narrow">
+      <span class="script-title serif-title reveal">Our Story</span>
+      <p class="story-text reveal">
+        Có một người, chỉ cần nắm tay là thấy cả thế giới bình yên.
+        Chúng mình đã đi qua bao mùa nắng mưa để hôm nay được về chung một nhà.
+      </p>
+      <p class="story-forever reveal">Together forever</p>
+    </div>
+  </section>
+
+  <!-- ===== 6. LỊCH TRÌNH ===== -->
+  <section class="section schedule">
+    <div class="wrap narrow">
+      <span class="script-title reveal">Lịch trình</span>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-dot">📸</div>
+          <div class="tl-body"><span class="tl-time">09:00</span><h4>Chụp ảnh</h4></div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot">💍</div>
+          <div class="tl-body"><span class="tl-time">11:00</span><h4>Trao nhẫn</h4></div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot">🥂</div>
+          <div class="tl-body"><span class="tl-time">11:30</span><h4>Đãi tiệc</h4></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 7. ĐẾM NGƯỢC ===== -->
   <section class="section countdown-sec">
     <div class="wrap">
       <span class="script-title light reveal">Đếm ngược ngày vui</span>
@@ -105,109 +158,16 @@
     </div>
   </section>
 
-  <!-- ===== 5. CHUYỆN TÌNH YÊU ===== -->
-  <section class="section story">
-    <div class="wrap">
-      <span class="script-title reveal">Chuyện tình yêu</span>
-      <div class="timeline">
-        <div class="tl-item reveal">
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <h4>Lần đầu gặp gỡ</h4>
-            <span class="tl-date">2019</span>
-            <p>Một buổi chiều tình cờ, hai đứa gặp nhau và bắt đầu câu chuyện của riêng mình.</p>
-          </div>
-        </div>
-        <div class="tl-item reveal">
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <h4>Yêu nhau</h4>
-            <span class="tl-date">2021</span>
-            <p>Những chuyến đi, những bữa cơm và cả những giận hờn đã gắn kết chúng tôi.</p>
-          </div>
-        </div>
-        <div class="tl-item reveal">
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <h4>Lời cầu hôn</h4>
-            <span class="tl-date">2024</span>
-            <p>"Em có đồng ý cùng anh đi hết quãng đường còn lại không?" — Và câu trả lời là Đồng ý.</p>
-          </div>
-        </div>
-        <div class="tl-item reveal">
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <h4>Về chung một nhà</h4>
-            <span class="tl-date">2025</span>
-            <p>Và hôm nay, chúng tôi chính thức viết tiếp câu chuyện với tên gọi "Gia đình".</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== 6. SỰ KIỆN ===== -->
-  <section class="section events" id="sukien">
-    <div class="wrap">
-      <span class="script-title reveal">Sự kiện cưới</span>
-      <div class="event-grid">
-        <div class="event-card reveal">
-          <h3>Lễ Vu Quy</h3>
-          <div class="event-time">
-            <span class="ev-day">CN</span>
-            <span class="ev-date">11 . 01 . 2026</span>
-            <span class="ev-hour">12:00</span>
-          </div>
-          <p class="ev-place">Tư gia nhà gái</p>
-          <p class="ev-addr">Quận 12, TP. Hồ Chí Minh</p>
-          <a class="ev-map" href="https://maps.google.com/?q=Quan+12+Ho+Chi+Minh" target="_blank" rel="noopener">📍 Xem bản đồ</a>
-        </div>
-        <div class="event-card featured reveal">
-          <h3>Lễ Thành Hôn</h3>
-          <div class="event-time">
-            <span class="ev-day">T2</span>
-            <span class="ev-date">05 . 12 . 2025</span>
-            <span class="ev-hour">09:30</span>
-          </div>
-          <p class="ev-place">Tư gia nhà trai</p>
-          <p class="ev-addr">Mai Dịch, Cầu Giấy, Hà Nội</p>
-          <a class="ev-map" href="https://maps.google.com/?q=Mai+Dich+Cau+Giay+Ha+Noi" target="_blank" rel="noopener">📍 Xem bản đồ</a>
-        </div>
-        <div class="event-card reveal">
-          <h3>Tiệc Cưới</h3>
-          <div class="event-time">
-            <span class="ev-day">T2</span>
-            <span class="ev-date">05 . 12 . 2025</span>
-            <span class="ev-hour">11:30</span>
-          </div>
-          <p class="ev-place">Trung tâm tiệc cưới</p>
-          <p class="ev-addr">Sảnh Hồng Ngọc, Hà Nội</p>
-          <a class="ev-map" href="https://maps.google.com/?q=trung+tam+tiec+cuoi+Ha+Noi" target="_blank" rel="noopener">📍 Xem bản đồ</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== 7. ALBUM ẢNH ===== -->
-  <section class="section gallery">
-    <div class="wrap">
-      <span class="script-title reveal">Album ảnh cưới</span>
-      <div class="gallery-grid" id="gallery">
-        <!-- ảnh chèn bằng JS để dễ thay -->
-      </div>
-    </div>
-  </section>
-
   <!-- ===== 8. RSVP ===== -->
   <section class="section rsvp" id="rsvp">
     <div class="wrap narrow">
       <span class="script-title light reveal">Xác nhận tham dự</span>
-      <p class="rsvp-note reveal">Sự hiện diện của bạn là niềm vinh hạnh của chúng tôi. Vui lòng phản hồi giúp nhé!</p>
+      <p class="rsvp-note reveal">Sự hiện diện của bạn là niềm vinh hạnh của chúng tôi.</p>
       <form class="rsvp-form reveal" id="rsvpForm" novalidate>
         <input type="text" name="name" placeholder="Họ và tên của bạn" required />
         <div class="rsvp-row">
-          <label class="radio"><input type="radio" name="attend" value="yes" checked /> Có, mình sẽ đến 🎉</label>
-          <label class="radio"><input type="radio" name="attend" value="no" /> Rất tiếc, mình bận 😢</label>
+          <label class="radio"><input type="radio" name="attend" value="yes" checked /> Có, mình sẽ đến</label>
+          <label class="radio"><input type="radio" name="attend" value="no" /> Rất tiếc, mình bận</label>
         </div>
         <select name="guests" aria-label="Số người tham dự">
           <option value="1">1 người</option>
@@ -242,13 +202,12 @@
   <footer class="foot">
     <div class="wrap">
       <p class="foot-thanks script-title">Thank you</p>
-      <p class="foot-names">Hoàng Minh &amp; Mai Chi</p>
-      <p class="foot-copy">© <span id="year"></span> · Thiệp cưới online · Made with ❤️</p>
+      <p class="foot-names">Lê Minh &amp; Chi Pu</p>
+      <p class="foot-copy">© <span id="year"></span> · Thiệp cưới online</p>
     </div>
   </footer>
 
   <button class="to-top" id="toTop" aria-label="Lên đầu trang">↑</button>
-
   <script src="script.js"></script>
 </body>
 </html>

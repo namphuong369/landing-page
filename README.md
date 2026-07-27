@@ -15,18 +15,20 @@ landing-page/
 └── README.md
 ```
 
-## Các phần trong thiệp
+## Các phần trong thiệp (bám cấu trúc thiep-cuoi-43)
 
 1. Cover — tên cô dâu chú rể + ngày cưới
-2. Trân trọng báo tin — thông tin hai họ
-3. Cô dâu & Chú rể
-4. Đếm ngược ngày cưới
-5. Chuyện tình yêu (timeline)
-6. Sự kiện cưới (Vu Quy / Thành Hôn / Tiệc) + link bản đồ
-7. Album ảnh (bấm để phóng to)
+2. Trân Trọng Thông Báo — thông tin hai họ
+3. Cô dâu & Chú rể (ảnh để trống — placeholder)
+4. Sự kiện cưới — Lễ Thành Hôn (nhà trai) & Lễ Vu Quy (nhà gái) + link bản đồ
+5. Our Story — "Together forever"
+6. Lịch trình — Chụp ảnh 09:00 · Trao nhẫn 11:00 · Đãi tiệc 11:30
+7. Đếm ngược ngày cưới
 8. Xác nhận tham dự (RSVP)
 9. Gửi lời chúc (lưu tại trình duyệt)
 10. Footer cảm ơn
+
+Đã tối ưu responsive cho **web / tablet / điện thoại** (breakpoint 900px, 600px, 360px).
 
 ## Tùy biến nhanh
 

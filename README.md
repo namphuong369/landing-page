@@ -30,6 +30,8 @@ landing-page/
 
 Đã tối ưu responsive cho **web / tablet / điện thoại** (breakpoint 900px, 600px, 360px).
 
+**Chủ đề:** Hoa Lá Blush – Simple (tông hồng blush + lá xanh sage, trang trí hoa lá, bố cục tối giản). Toàn bộ hoa văn/CSS là bản riêng, không sao chép asset của bên thứ ba.
+
 ## Tùy biến nhanh
 
 | Muốn đổi | Sửa ở đâu |

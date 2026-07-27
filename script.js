@@ -183,7 +183,7 @@
   // ---- Hiệu ứng cánh hoa / trái tim rơi ----
   var petals = $("#petals");
   if (petals && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    var glyphs = ["🌸", "🌷", "💗", "🌺", "❀"];
+    var glyphs = ["🌸", "🌿", "🍃", "🌷", "❀"];
     setInterval(function () {
       if (document.hidden) return;
       var p = document.createElement("span");

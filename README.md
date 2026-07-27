@@ -1,66 +1,44 @@
-# Thiệp cưới online — HTML/CSS/JS thuần
+# Thiệp cưới online — Hoa Lá Blush
 
-Trang thiệp cưới một trang (single-page), không dùng framework, sẵn sàng deploy lên [Vercel](https://vercel.com).
-Thiết kế lấy cảm hứng từ thể loại thiệp cưới điện tử (cover, thông báo hai họ, cô dâu chú rể, đếm ngược, chuyện tình yêu, sự kiện, album, xác nhận tham dự, gửi lời chúc) — toàn bộ code và nội dung là bản riêng, nội dung mẫu để bạn tự thay.
+Trang thiệp cưới một trang (single-page), **HTML/CSS/JS thuần**, không framework, deploy [Vercel](https://vercel.com).
+Phong cách "Hoa Lá Blush": tông hồng blush + lá xanh sage + kem, tối giản sang trọng. Toàn bộ code/hoa văn là bản riêng — không sao chép asset của bên thứ ba.
 
-## Cấu trúc
+> `index.html` là **file tự chứa** (đã gộp CSS + JS bên trong). Chỉ cần file này là chạy được.
 
-```
-landing-page/
-├── index.html      ← Nội dung thiệp (10 phần)
-├── styles.css      ← Style + responsive + animation (palette hồng/kem/gold)
-├── script.js       ← Đếm ngược, album lightbox, RSVP, lời chúc, hoa rơi, nhạc nền
-├── music.mp3       ← (tùy chọn) nhạc nền — bạn tự thêm
-├── vercel.json
-└── README.md
-```
+## Chức năng
 
-## Các phần trong thiệp (bám cấu trúc thiep-cuoi-43)
-
-1. Cover — tên cô dâu chú rể + ngày cưới
-2. Trân Trọng Thông Báo — thông tin hai họ
-3. Cô dâu & Chú rể (ảnh để trống — placeholder)
-4. Sự kiện cưới — Lễ Thành Hôn (nhà trai) & Lễ Vu Quy (nhà gái) + link bản đồ
-5. Our Story — "Together forever"
-6. Lịch trình — Chụp ảnh 09:00 · Trao nhẫn 11:00 · Đãi tiệc 11:30
-7. Đếm ngược ngày cưới
-8. Xác nhận tham dự (RSVP)
-9. Gửi lời chúc (lưu tại trình duyệt)
-10. Footer cảm ơn
-
-Đã tối ưu responsive cho **web / tablet / điện thoại** (breakpoint 900px, 600px, 360px).
-
-**Chủ đề:** Hoa Lá Blush – Simple (tông hồng blush + lá xanh sage, trang trí hoa lá, bố cục tối giản). Toàn bộ hoa văn/CSS là bản riêng, không sao chép asset của bên thứ ba.
+- ✉️ **Mở phong bì** đầu trang (bấm để mở)
+- 💌 **Cá nhân hoá tên khách** qua URL: `?to=Tên Khách` (vd `...vercel.app/?to=Anh Nam`)
+- 🕰️ **Đếm ngược** ngày cưới (realtime)
+- 👰 Cô dâu & chú rể, 💕 Chuyện tình yêu (timeline)
+- 📅 **Sự kiện** (Vu Quy / Thành Hôn / Tân Hôn) + "Xem bản đồ" + **Thêm vào lịch (.ics)**
+- 🖼️ **Album** ảnh + lightbox (bấm để phóng to)
+- ✅ **RSVP** xác nhận tham dự (có hạn phản hồi, lưu localStorage)
+- 📖 **Sổ lưu bút** — gửi lời chúc (lưu localStorage)
+- 🎁 **Mừng cưới** — QR + số tài khoản + nút sao chép
+- 🔗 **Chia sẻ** (Facebook / copy link / Web Share)
+- 🌙 **Sáng/Tối** + 🌸 hoa lá rơi + reveal khi cuộn
+- 📱 Responsive web/tablet/mobile, hỗ trợ `prefers-reduced-motion`
 
 ## Tùy biến nhanh
 
-| Muốn đổi | Sửa ở đâu |
-|----------|-----------|
-| Tên, ngày, thông tin hai họ | `index.html` |
-| Ngày đếm ngược | thuộc tính `data-date` của `#countdown` trong `index.html` |
-| Ảnh cô dâu chú rể | `background-image` trong `.person .photo` (index.html) |
-| Ảnh album | mảng `photos` trong `script.js` |
-| Màu chủ đạo, font | biến `:root` trong `styles.css` |
-| Nhạc nền | thêm file `music.mp3` cùng thư mục |
-| Bản đồ | link `.ev-map` trong index.html (đổi query Google Maps) |
+| Muốn đổi | Sửa ở đâu (trong `index.html`) |
+|----------|-------------------------------|
+| Tên, ngày, hai họ, sự kiện | phần markup tương ứng |
+| Ngày đếm ngược | `data-date` của `#cd` |
+| Ảnh cô dâu/chú rể, album | hiện là placeholder — gắn `<img>` vào `.frame` / `.gal` |
+| Màu, font | biến `:root` trong `<style>` |
+| Số tài khoản mừng cưới | `#bankGroom`, `#bankBride` |
+| Nhạc nền | thêm `<audio src="music.mp3">` và nối vào nút ♪ |
 
-## Chạy thử ở máy
+> ⚠️ **Cần kiểm tra trước khi phát hành thật:** ngày **âm lịch** và tên gọi lễ nhà trai theo vùng (Thành Hôn/Tân Hôn). Nội dung hiện tại là **mẫu**.
 
-Mở trực tiếp `index.html`, hoặc chạy server tĩnh:
+## Chạy thử
 
 ```bash
 python -m http.server 3000   # hoặc: npx serve .
 ```
 
-## Deploy lên Vercel
+## Deploy Vercel
 
-Repo đã kết nối GitHub, chỉ cần:
-
-1. Vào https://vercel.com → **Add New… → Project**
-2. Chọn repo `landing-page` → **Import**
-3. Framework Preset: **Other** · Build Command / Output Directory: *(để trống)*
-4. **Deploy**
-
-Mỗi lần `git push` lên `main`, Vercel tự deploy lại.
-
-> Lưu ý: form RSVP và lời chúc hiện xử lý phía client (RSVP hiện thông báo; lời chúc lưu localStorage của trình duyệt) — chưa gửi dữ liệu về server. Muốn nhận dữ liệu thật thì nối tới Google Form / Formspree / Vercel Serverless Function.
+Vào https://vercel.com → **Add New → Project** → chọn repo → Framework **Other**, Build/Output để trống → **Deploy**. Mỗi lần `git push` lên `main` sẽ tự deploy lại.

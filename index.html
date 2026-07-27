@@ -1,199 +1,254 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Landing page giới thiệu sản phẩm - HTML/CSS/JS thuần, deploy trên Vercel." />
-    <title>MyBrand — Giải pháp cho bạn</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Thiệp cưới online - Trân trọng kính mời quý khách đến chung vui cùng gia đình chúng tôi." />
+  <title>Hoàng Minh & Mai Chi — Thiệp Cưới</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>" />
 </head>
 <body>
-    <!-- ===== Header ===== -->
-    <header class="site-header" id="siteHeader">
-        <div class="container nav">
-            <a href="#" class="logo">🚀 MyBrand</a>
-            <button class="nav-toggle" id="navToggle" aria-label="Mở menu">☰</button>
-            <nav class="nav-links" id="navLinks">
-                <a href="#features">Tính năng</a>
-                <a href="#about">Giới thiệu</a>
-                <a href="#pricing">Bảng giá</a>
-                <a href="#contact" class="btn btn-outline">Liên hệ</a>
-            </nav>
+
+  <!-- ===== Nhạc nền ===== -->
+  <!-- Đặt file nhạc tên "music.mp3" cùng thư mục để bật nhạc nền -->
+  <audio id="bgMusic" loop preload="none">
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+  <button class="music-btn" id="musicBtn" aria-label="Bật/tắt nhạc" title="Bật/tắt nhạc">
+    <span class="music-ico">♪</span>
+  </button>
+
+  <!-- Hiệu ứng cánh hoa rơi -->
+  <div class="petals" id="petals" aria-hidden="true"></div>
+
+  <!-- ===== 1. COVER / HERO ===== -->
+  <section class="cover" id="top">
+    <div class="cover-frame">
+      <p class="cover-pre reveal">Save the Date</p>
+      <h1 class="cover-names reveal">
+        <span>Hoàng&nbsp;Minh</span>
+        <span class="amp">&amp;</span>
+        <span>Mai&nbsp;Chi</span>
+      </h1>
+      <div class="cover-line reveal"></div>
+      <p class="cover-date reveal" id="coverDate">05 . 12 . 2025</p>
+      <p class="cover-sub reveal">Trân trọng kính mời bạn đến chung vui cùng chúng tôi</p>
+      <a href="#thongbao" class="scroll-hint reveal" aria-label="Cuộn xuống">˅</a>
+    </div>
+  </section>
+
+  <!-- ===== 2. THÔNG BÁO HAI HỌ ===== -->
+  <section class="section announce" id="thongbao">
+    <div class="wrap">
+      <span class="script-title reveal">Trân trọng báo tin</span>
+      <div class="families">
+        <div class="family reveal">
+          <h3>NHÀ TRAI</h3>
+          <p class="fam-name">Ông &amp; Bà</p>
+          <p>Nguyễn Văn A</p>
+          <p>Trần Thị B</p>
+          <p class="fam-addr">Mai Dịch, Cầu Giấy, Hà Nội</p>
         </div>
-    </header>
-
-    <!-- ===== Hero ===== -->
-    <section class="hero">
-        <div class="container hero-inner">
-            <div class="hero-text reveal">
-                <span class="badge">✨ Mới ra mắt 2026</span>
-                <h1>Giải pháp <span class="grad">đơn giản</span> cho công việc của bạn</h1>
-                <p class="lead">
-                    Xây dựng nhanh, triển khai dễ, mở rộng linh hoạt. Trang landing page
-                    thuần HTML/CSS/JS, sẵn sàng import lên Vercel chỉ trong vài giây.
-                </p>
-                <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary">Bắt đầu ngay</a>
-                    <a href="#features" class="btn btn-ghost">Tìm hiểu thêm →</a>
-                </div>
-                <div class="hero-stats">
-                    <div><strong data-count="1200">0</strong><span>Người dùng</span></div>
-                    <div><strong data-count="98">0</strong><span>% hài lòng</span></div>
-                    <div><strong data-count="24">0</strong><span>Giờ hỗ trợ</span></div>
-                </div>
-            </div>
-            <div class="hero-visual reveal">
-                <div class="glass-card">
-                    <div class="card-row"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-                    <pre><code>&lt;!-- deploy lên Vercel --&gt;
-$ git push
-✔ Building...
-✔ Deployed 🎉</code></pre>
-                </div>
-            </div>
+        <div class="family-heart reveal">💗</div>
+        <div class="family reveal">
+          <h3>NHÀ GÁI</h3>
+          <p class="fam-name">Ông &amp; Bà</p>
+          <p>Lê Văn C</p>
+          <p>Phạm Thị D</p>
+          <p class="fam-addr">Quận 12, TP. Hồ Chí Minh</p>
         </div>
-    </section>
+      </div>
+      <p class="announce-text reveal">
+        Chúng tôi hân hạnh báo tin lễ thành hôn của hai con chúng tôi
+      </p>
+    </div>
+  </section>
 
-    <!-- ===== Features ===== -->
-    <section class="section" id="features">
-        <div class="container">
-            <div class="section-head reveal">
-                <h2>Tính năng nổi bật</h2>
-                <p>Mọi thứ bạn cần để bắt đầu, không thừa không thiếu.</p>
-            </div>
-            <div class="grid grid-3">
-                <div class="feature-card reveal">
-                    <div class="icon">⚡</div>
-                    <h3>Nhanh chóng</h3>
-                    <p>HTML/CSS/JS thuần, không build phức tạp — tải trang tức thì.</p>
-                </div>
-                <div class="feature-card reveal">
-                    <div class="icon">📱</div>
-                    <h3>Responsive</h3>
-                    <p>Hiển thị đẹp trên mọi thiết bị, từ điện thoại đến màn hình lớn.</p>
-                </div>
-                <div class="feature-card reveal">
-                    <div class="icon">🎨</div>
-                    <h3>Dễ tùy biến</h3>
-                    <p>Đổi màu, nội dung, logo chỉ trong vài dòng — không cần framework.</p>
-                </div>
-                <div class="feature-card reveal">
-                    <div class="icon">🚀</div>
-                    <h3>Deploy 1-click</h3>
-                    <p>Import thẳng vào Vercel, tự động có HTTPS và CDN toàn cầu.</p>
-                </div>
-                <div class="feature-card reveal">
-                    <div class="icon">🌙</div>
-                    <h3>Dark mode</h3>
-                    <p>Tự động theo theme hệ thống, nhẹ mắt khi làm việc buổi tối.</p>
-                </div>
-                <div class="feature-card reveal">
-                    <div class="icon">🔒</div>
-                    <h3>An toàn</h3>
-                    <p>Tĩnh hoàn toàn, không backend — không lo lỗ hổng server.</p>
-                </div>
-            </div>
+  <!-- ===== 3. CÔ DÂU & CHÚ RỂ ===== -->
+  <section class="section couple">
+    <div class="wrap">
+      <span class="script-title reveal">Cô dâu &amp; Chú rể</span>
+      <div class="couple-grid">
+        <div class="person reveal">
+          <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=60')"></div>
+          <h3>Hoàng Minh</h3>
+          <p class="role">Chú rể</p>
+          <p class="bio">Con trai Ông Nguyễn Văn A &amp; Bà Trần Thị B.</p>
         </div>
-    </section>
-
-    <!-- ===== About ===== -->
-    <section class="section section-alt" id="about">
-        <div class="container about-inner">
-            <div class="reveal">
-                <h2>Vì sao chọn chúng tôi?</h2>
-                <p>
-                    Chúng tôi tin vào sự đơn giản. Một trang web tốt không cần hàng trăm
-                    thư viện — chỉ cần code sạch, tốc độ nhanh và trải nghiệm mượt mà.
-                </p>
-                <ul class="check-list">
-                    <li>Không phụ thuộc framework nặng nề</li>
-                    <li>Mã nguồn dễ đọc, dễ bảo trì</li>
-                    <li>Tối ưu SEO và tốc độ tải</li>
-                    <li>Miễn phí hosting trên Vercel</li>
-                </ul>
-            </div>
-            <div class="about-visual reveal">
-                <div class="stat-big">
-                    <strong>100%</strong>
-                    <span>HTML · CSS · JS thuần</span>
-                </div>
-            </div>
+        <div class="person reveal">
+          <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=800&q=60')"></div>
+          <h3>Mai Chi</h3>
+          <p class="role">Cô dâu</p>
+          <p class="bio">Con gái Ông Lê Văn C &amp; Bà Phạm Thị D.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- ===== Pricing ===== -->
-    <section class="section" id="pricing">
-        <div class="container">
-            <div class="section-head reveal">
-                <h2>Bảng giá đơn giản</h2>
-                <p>Chọn gói phù hợp với nhu cầu của bạn.</p>
-            </div>
-            <div class="grid grid-3">
-                <div class="price-card reveal">
-                    <h3>Miễn phí</h3>
-                    <div class="price">0đ<span>/tháng</span></div>
-                    <ul>
-                        <li>1 website</li>
-                        <li>Deploy Vercel</li>
-                        <li>Hỗ trợ cộng đồng</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline full">Chọn gói</a>
-                </div>
-                <div class="price-card featured reveal">
-                    <span class="tag">Phổ biến</span>
-                    <h3>Chuyên nghiệp</h3>
-                    <div class="price">199k<span>/tháng</span></div>
-                    <ul>
-                        <li>Không giới hạn website</li>
-                        <li>Tên miền riêng</li>
-                        <li>Hỗ trợ ưu tiên</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary full">Chọn gói</a>
-                </div>
-                <div class="price-card reveal">
-                    <h3>Doanh nghiệp</h3>
-                    <div class="price">Liên hệ</div>
-                    <ul>
-                        <li>Giải pháp riêng</li>
-                        <li>SLA cam kết</li>
-                        <li>Hỗ trợ 24/7</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline full">Liên hệ</a>
-                </div>
-            </div>
+  <!-- ===== 4. ĐẾM NGƯỢC ===== -->
+  <section class="section countdown-sec">
+    <div class="wrap">
+      <span class="script-title light reveal">Đếm ngược ngày vui</span>
+      <div class="countdown reveal" id="countdown" data-date="2025-12-05T09:30:00">
+        <div class="cd-item"><strong id="cd-days">0</strong><span>Ngày</span></div>
+        <div class="cd-item"><strong id="cd-hours">0</strong><span>Giờ</span></div>
+        <div class="cd-item"><strong id="cd-mins">0</strong><span>Phút</span></div>
+        <div class="cd-item"><strong id="cd-secs">0</strong><span>Giây</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. CHUYỆN TÌNH YÊU ===== -->
+  <section class="section story">
+    <div class="wrap">
+      <span class="script-title reveal">Chuyện tình yêu</span>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <h4>Lần đầu gặp gỡ</h4>
+            <span class="tl-date">2019</span>
+            <p>Một buổi chiều tình cờ, hai đứa gặp nhau và bắt đầu câu chuyện của riêng mình.</p>
+          </div>
         </div>
-    </section>
-
-    <!-- ===== Contact / CTA ===== -->
-    <section class="section cta" id="contact">
-        <div class="container cta-inner reveal">
-            <h2>Sẵn sàng bắt đầu?</h2>
-            <p>Để lại thông tin, chúng tôi sẽ liên hệ với bạn sớm nhất.</p>
-            <form class="contact-form" id="contactForm" novalidate>
-                <input type="text" name="name" placeholder="Họ tên của bạn" required />
-                <input type="email" name="email" placeholder="Email liên hệ" required />
-                <button type="submit" class="btn btn-primary">Gửi thông tin</button>
-                <p class="form-msg" id="formMsg" role="status"></p>
-            </form>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <h4>Yêu nhau</h4>
+            <span class="tl-date">2021</span>
+            <p>Những chuyến đi, những bữa cơm và cả những giận hờn đã gắn kết chúng tôi.</p>
+          </div>
         </div>
-    </section>
-
-    <!-- ===== Footer ===== -->
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <span>© <span id="year"></span> MyBrand. Made with ❤️ · Deploy trên Vercel.</span>
-            <div class="social">
-                <a href="#" aria-label="GitHub">GitHub</a>
-                <a href="#" aria-label="Facebook">Facebook</a>
-                <a href="#" aria-label="Email">Email</a>
-            </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <h4>Lời cầu hôn</h4>
+            <span class="tl-date">2024</span>
+            <p>"Em có đồng ý cùng anh đi hết quãng đường còn lại không?" — Và câu trả lời là Đồng ý.</p>
+          </div>
         </div>
-    </footer>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <h4>Về chung một nhà</h4>
+            <span class="tl-date">2025</span>
+            <p>Và hôm nay, chúng tôi chính thức viết tiếp câu chuyện với tên gọi "Gia đình".</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <button class="to-top" id="toTop" aria-label="Lên đầu trang">↑</button>
+  <!-- ===== 6. SỰ KIỆN ===== -->
+  <section class="section events" id="sukien">
+    <div class="wrap">
+      <span class="script-title reveal">Sự kiện cưới</span>
+      <div class="event-grid">
+        <div class="event-card reveal">
+          <h3>Lễ Vu Quy</h3>
+          <div class="event-time">
+            <span class="ev-day">CN</span>
+            <span class="ev-date">11 . 01 . 2026</span>
+            <span class="ev-hour">12:00</span>
+          </div>
+          <p class="ev-place">Tư gia nhà gái</p>
+          <p class="ev-addr">Quận 12, TP. Hồ Chí Minh</p>
+          <a class="ev-map" href="https://maps.google.com/?q=Quan+12+Ho+Chi+Minh" target="_blank" rel="noopener">📍 Xem bản đồ</a>
+        </div>
+        <div class="event-card featured reveal">
+          <h3>Lễ Thành Hôn</h3>
+          <div class="event-time">
+            <span class="ev-day">T2</span>
+            <span class="ev-date">05 . 12 . 2025</span>
+            <span class="ev-hour">09:30</span>
+          </div>
+          <p class="ev-place">Tư gia nhà trai</p>
+          <p class="ev-addr">Mai Dịch, Cầu Giấy, Hà Nội</p>
+          <a class="ev-map" href="https://maps.google.com/?q=Mai+Dich+Cau+Giay+Ha+Noi" target="_blank" rel="noopener">📍 Xem bản đồ</a>
+        </div>
+        <div class="event-card reveal">
+          <h3>Tiệc Cưới</h3>
+          <div class="event-time">
+            <span class="ev-day">T2</span>
+            <span class="ev-date">05 . 12 . 2025</span>
+            <span class="ev-hour">11:30</span>
+          </div>
+          <p class="ev-place">Trung tâm tiệc cưới</p>
+          <p class="ev-addr">Sảnh Hồng Ngọc, Hà Nội</p>
+          <a class="ev-map" href="https://maps.google.com/?q=trung+tam+tiec+cuoi+Ha+Noi" target="_blank" rel="noopener">📍 Xem bản đồ</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- ===== 7. ALBUM ẢNH ===== -->
+  <section class="section gallery">
+    <div class="wrap">
+      <span class="script-title reveal">Album ảnh cưới</span>
+      <div class="gallery-grid" id="gallery">
+        <!-- ảnh chèn bằng JS để dễ thay -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 8. RSVP ===== -->
+  <section class="section rsvp" id="rsvp">
+    <div class="wrap narrow">
+      <span class="script-title light reveal">Xác nhận tham dự</span>
+      <p class="rsvp-note reveal">Sự hiện diện của bạn là niềm vinh hạnh của chúng tôi. Vui lòng phản hồi giúp nhé!</p>
+      <form class="rsvp-form reveal" id="rsvpForm" novalidate>
+        <input type="text" name="name" placeholder="Họ và tên của bạn" required />
+        <div class="rsvp-row">
+          <label class="radio"><input type="radio" name="attend" value="yes" checked /> Có, mình sẽ đến 🎉</label>
+          <label class="radio"><input type="radio" name="attend" value="no" /> Rất tiếc, mình bận 😢</label>
+        </div>
+        <select name="guests" aria-label="Số người tham dự">
+          <option value="1">1 người</option>
+          <option value="2">2 người</option>
+          <option value="3">3 người</option>
+          <option value="4">4 người trở lên</option>
+        </select>
+        <select name="side" aria-label="Khách mời của">
+          <option value="trai">Khách nhà trai</option>
+          <option value="gai">Khách nhà gái</option>
+        </select>
+        <button type="submit" class="btn-gold">Gửi xác nhận</button>
+        <p class="form-msg" id="rsvpMsg" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== 9. GỬI LỜI CHÚC ===== -->
+  <section class="section wishes">
+    <div class="wrap narrow">
+      <span class="script-title reveal">Gửi lời chúc</span>
+      <form class="wish-form reveal" id="wishForm" novalidate>
+        <input type="text" name="wname" placeholder="Tên của bạn" required />
+        <textarea name="wtext" rows="3" placeholder="Lời chúc gửi đến cô dâu chú rể..." required></textarea>
+        <button type="submit" class="btn-outline-gold">Gửi lời chúc 💌</button>
+      </form>
+      <ul class="wish-list" id="wishList"></ul>
+    </div>
+  </section>
+
+  <!-- ===== 10. FOOTER ===== -->
+  <footer class="foot">
+    <div class="wrap">
+      <p class="foot-thanks script-title">Thank you</p>
+      <p class="foot-names">Hoàng Minh &amp; Mai Chi</p>
+      <p class="foot-copy">© <span id="year"></span> · Thiệp cưới online · Made with ❤️</p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Lên đầu trang">↑</button>
+
+  <script src="script.js"></script>
 </body>
 </html>

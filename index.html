@@ -47,7 +47,7 @@
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden}
 body{
   font-family:var(--f-body);color:var(--ink);line-height:1.75;font-weight:300;
   -webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative;
@@ -184,9 +184,9 @@ button{font-family:inherit;cursor:pointer}
    COVERFLOW — khung ảnh đôi kiểu pager (mục "Ảnh chúng mình")
    ============================================================ */
 .cf-wrap{margin:26px 0 6px;position:relative;z-index:2;width:100%;overflow:hidden;padding:6px 0}
-.cf{position:relative;height:clamp(440px,80vw,660px);max-width:1040px;margin:0 auto;perspective:1700px}
+.cf{position:relative;height:clamp(440px,80vw,660px);max-width:1040px;margin:0 auto}
 .cf-card{position:absolute;top:50%;left:50%;width:min(78vw,380px);aspect-ratio:3/4;
-  transform:translate(-50%,-50%);transform-style:preserve-3d;will-change:transform,opacity;
+  transform:translate(-50%,-50%);will-change:transform,opacity;
   transition:transform .55s cubic-bezier(.2,.7,.2,1),opacity .55s;cursor:pointer;
   border-radius:150px 150px 14px 14px;overflow:hidden;
   background:linear-gradient(160deg,var(--red),var(--red-deep));
@@ -316,7 +316,7 @@ button{font-family:inherit;cursor:pointer}
 .bank-no{font-family:var(--f-body);font-weight:600;font-size:1.32rem;color:var(--ink);letter-spacing:.1em;font-variant-numeric:lining-nums tabular-nums;margin:6px 0}
 .copy-ok{font-size:.8rem;color:var(--gold-2);min-height:1.2em}
 
-.foot{text-align:center;padding:clamp(60px,9vw,100px) 0;position:relative;z-index:1}
+.foot{text-align:center;padding:clamp(60px,9vw,100px) 0;position:relative;z-index:1;overflow:hidden}
 .foot .xi{font-family:var(--f-cjk);font-size:2.6rem;color:var(--gold-2)}
 .foot .thanks{font-family:var(--f-fancy);font-size:clamp(2.3rem,7.5vw,3.8rem);line-height:1.4;margin-top:4px;padding:0 16px;overflow-wrap:anywhere}
 .foot .fnames{font-family:var(--f-serif);font-size:1.6rem;margin-top:8px;color:var(--ink)}
@@ -543,18 +543,7 @@ button{font-family:inherit;cursor:pointer}
   </div>
 </section>
 
-<!-- ===== MỪNG CƯỚI ===== -->
-<section class="section">
-  <div class="wrap">
-    <p class="eyebrow">Hộp mừng cưới</p>
-    <span class="sec-title foil">Gửi lời chúc phúc</span>
-    <p class="sec-lead">Sự có mặt của Quý khách đã là món quà quý. Nếu muốn gửi lời chúc phúc, đây là thông tin của chúng tôi.</p>
-    <div class="gift-grid">
-      <div class="gift-card glass"><h4>Chú rể</h4><p class="bank-line">Ngân hàng Vietcombank</p><p class="bank-no" id="bankGroom">0123456789</p><p class="bank-line">ANH CU</p><button class="btn btn-line" data-copy="bankGroom" style="margin-top:10px">Sao chép số TK</button><p class="copy-ok" data-ok="bankGroom"></p></div>
-      <div class="gift-card glass"><h4>Cô dâu</h4><p class="bank-line">Ngân hàng Techcombank</p><p class="bank-no" id="bankBride">9876543210</p><p class="bank-line">CHI DAU</p><button class="btn btn-line" data-copy="bankBride" style="margin-top:10px">Sao chép số TK</button><p class="copy-ok" data-ok="bankBride"></p></div>
-    </div>
-  </div>
-</section>
+<!-- (đã bỏ mục "Hộp mừng cưới") -->
 
 <!-- ===== FOOTER ===== -->
 <footer class="foot">
@@ -643,7 +632,7 @@ button{font-family:inherit;cursor:pointer}
     var dotEls=$$('button',dots);
     function layout(){cards.forEach(function(c,i){var off=i-cur,ab=Math.abs(off);c.style.zIndex=100-ab;
       c.style.opacity=ab>1?0:(ab===0?1:.72);c.style.pointerEvents=ab>1?'none':'auto';
-      c.style.transform='translate(-50%,-50%) translateX('+(off*62)+'%) scale('+(ab===0?1:(ab===1?.7:.48))+') rotateY('+(-off*15)+'deg)';
+      c.style.transform='translate(-50%,-50%) translateX('+(off*60)+'%) scale('+(ab===0?1:.72)+')';
       c.classList.toggle('active',off===0);});
       dotEls.forEach(function(d,i){d.classList.toggle('on',i===cur)});}
     function go(i){cur=Math.max(0,Math.min(cards.length-1,i));layout();}

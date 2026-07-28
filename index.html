@@ -183,7 +183,7 @@ button{font-family:inherit;cursor:pointer}
 /* ============================================================
    COVERFLOW — khung ảnh đôi kiểu pager (mục "Ảnh chúng mình")
    ============================================================ */
-.cf-wrap{margin:26px 0 6px;position:relative;z-index:2;width:100%}
+.cf-wrap{margin:26px 0 6px;position:relative;z-index:2;width:100%;overflow:hidden;padding:6px 0}
 .cf{position:relative;height:clamp(440px,80vw,660px);max-width:1040px;margin:0 auto;perspective:1700px}
 .cf-card{position:absolute;top:50%;left:50%;width:min(78vw,380px);aspect-ratio:3/4;
   transform:translate(-50%,-50%);transform-style:preserve-3d;will-change:transform,opacity;
@@ -295,7 +295,7 @@ button{font-family:inherit;cursor:pointer}
 .fld.area .fi{top:15px}
 .fld>input,.fld>select,.fld>textarea{padding-left:44px}
 .fld.sel::after{content:"▾";position:absolute;right:16px;color:var(--gold);pointer-events:none;font-size:.9rem}
-.seg span{display:flex;align-items:center;justify-content:center;gap:9px;font-weight:500}
+.seg span{display:flex;align-items:center;justify-content:center;gap:8px;font-weight:500;white-space:nowrap;font-size:.94rem}
 .seg span i{font-style:normal;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;
   border:1.5px solid currentColor;font-size:.95rem;flex:0 0 auto}
 .seg input:checked+span i{background:#4a1010;color:var(--gold-2);border-color:transparent}
@@ -339,6 +339,7 @@ button{font-family:inherit;cursor:pointer}
 
 @media (max-width:900px){.ev-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto}.gal-grid{grid-template-columns:repeat(2,1fr)}.swallows{gap:clamp(80px,50vw,200px)}}
 @media (max-width:620px){.families{grid-template-columns:1fr;gap:20px}.fam-amp{margin:2px 0}.grid2{grid-template-columns:1fr}.gift-grid{grid-template-columns:1fr}.seg label{min-width:0}.cap-name{letter-spacing:.08em}.names-row{gap:10px}.couple-names{gap:14px}.eyebrow{letter-spacing:.22em}.sec-lead,.invite-text{padding:0 4px}}
+@media (max-width:390px){.seg{flex-direction:column}}
 </style>
 </head>
 <body>
@@ -512,7 +513,7 @@ button{font-family:inherit;cursor:pointer}
         <label class="fld"><span class="fi">👤</span><input type="text" name="name" placeholder="Họ và tên của bạn" required autocomplete="name"/></label>
         <div class="seg">
           <label><input type="radio" name="attend" value="yes" checked><span><i>✓</i> Tôi sẽ đến</span></label>
-          <label><input type="radio" name="attend" value="no"><span><i>✕</i> Tôi bận mất rồi</span></label>
+          <label><input type="radio" name="attend" value="no"><span><i>✕</i> Tôi bận rồi</span></label>
         </div>
         <div class="grid2">
           <label class="fld sel"><span class="fi">👥</span><select name="guests" aria-label="Số người"><option value="1">1 người</option><option value="2">2 người</option><option value="3">3 người</option><option value="4">4+ người</option></select></label>
@@ -641,7 +642,7 @@ button{font-family:inherit;cursor:pointer}
     cards.forEach(function(c,i){var b=document.createElement('button');b.setAttribute('aria-label','Ảnh '+(i+1));b.addEventListener('click',function(){go(i)});dots.appendChild(b);});
     var dotEls=$$('button',dots);
     function layout(){cards.forEach(function(c,i){var off=i-cur,ab=Math.abs(off);c.style.zIndex=100-ab;
-      c.style.opacity=ab>2?0:(ab===0?1:(ab===1?.75:.4));c.style.pointerEvents=ab>2?'none':'auto';
+      c.style.opacity=ab>1?0:(ab===0?1:.72);c.style.pointerEvents=ab>1?'none':'auto';
       c.style.transform='translate(-50%,-50%) translateX('+(off*62)+'%) scale('+(ab===0?1:(ab===1?.7:.48))+') rotateY('+(-off*15)+'deg)';
       c.classList.toggle('active',off===0);});
       dotEls.forEach(function(d,i){d.classList.toggle('on',i===cur)});}

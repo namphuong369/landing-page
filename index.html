@@ -47,7 +47,7 @@
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{
   font-family:var(--f-body);color:var(--ink);line-height:1.75;font-weight:300;
   -webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative;
@@ -150,7 +150,7 @@ button{font-family:inherit;cursor:pointer}
 /* ============================================================
    COVER
    ============================================================ */
-.cover{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;position:relative;overflow:hidden;padding:26px 20px 40px}
+.cover{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;position:relative;overflow:hidden;padding:26px 20px 40px}
 .cover-orn{position:absolute;width:min(52vw,420px);color:var(--gold);opacity:.16;pointer-events:none}
 .cover-orn.tl{top:-30px;left:-40px;transform:rotate(-6deg)}
 .cover-orn.br{bottom:-30px;right:-40px;transform:rotate(174deg)}
@@ -338,7 +338,7 @@ button{font-family:inherit;cursor:pointer}
 @keyframes fall{0%{transform:translateY(-10vh) rotate(0);opacity:0}12%{opacity:.9}100%{transform:translateY(112vh) rotate(560deg);opacity:0}}
 
 @media (max-width:900px){.ev-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto}.gal-grid{grid-template-columns:repeat(2,1fr)}.swallows{gap:clamp(80px,50vw,200px)}}
-@media (max-width:620px){.families{grid-template-columns:1fr;gap:26px}.fam-amp{transform:rotate(90deg)}.grid2{grid-template-columns:1fr}.gift-grid{grid-template-columns:1fr}.seg label{min-width:0}.cap-name{letter-spacing:.1em}.names-row{gap:10px}.couple-names{gap:14px}}
+@media (max-width:620px){.families{grid-template-columns:1fr;gap:20px}.fam-amp{margin:2px 0}.grid2{grid-template-columns:1fr}.gift-grid{grid-template-columns:1fr}.seg label{min-width:0}.cap-name{letter-spacing:.08em}.names-row{gap:10px}.couple-names{gap:14px}.eyebrow{letter-spacing:.22em}.sec-lead,.invite-text{padding:0 4px}}
 </style>
 </head>
 <body>

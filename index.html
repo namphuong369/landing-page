@@ -305,6 +305,18 @@ button{font-family:inherit;cursor:pointer}
 .wish-list .wn::before{content:"❁ ";color:var(--red)}
 .wish-list .wt{color:var(--ink-soft);margin-top:3px}
 .wish-count{text-align:center;color:var(--ink-soft);font-size:.85rem;margin-top:8px}
+/* Ngày âm lịch ở bìa */
+.cover-lunar{color:var(--gold);font-size:.84rem;font-style:italic;margin-top:3px;letter-spacing:.03em;z-index:2}
+/* Lời ngỏ */
+.letter{padding:clamp(28px,5vw,46px);border-radius:18px;text-align:center;position:relative}
+.letter::before{content:"❝";font-family:var(--f-serif);font-size:2.4rem;color:var(--gold);opacity:.6;display:block;line-height:1;margin-bottom:6px}
+.letter-body{font-size:1.12rem;color:var(--ink-soft);font-style:italic;line-height:1.95}
+.letter-sign{margin-top:20px;font-family:var(--f-script);font-size:1.8rem;color:var(--gold)}
+/* Liên hệ */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:680px;margin:0 auto}
+.contact-card{padding:30px 24px;text-align:center}
+.contact-card .c-side{font-family:var(--f-script);font-size:1.6rem;color:var(--gold)}
+.contact-card .c-name{margin:6px 0 16px;color:var(--ink)}
 
 .gift-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:760px;margin:0 auto}
 .gift-card{padding:30px 24px;text-align:center}
@@ -338,7 +350,7 @@ button{font-family:inherit;cursor:pointer}
 @keyframes fall{0%{transform:translateY(-10vh) rotate(0);opacity:0}12%{opacity:.9}100%{transform:translateY(112vh) rotate(560deg);opacity:0}}
 
 @media (max-width:900px){.ev-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto}.gal-grid{grid-template-columns:repeat(2,1fr)}.swallows{gap:clamp(80px,50vw,200px)}}
-@media (max-width:620px){.families{grid-template-columns:1fr;gap:20px}.fam-amp{margin:2px 0}.grid2{grid-template-columns:1fr}.gift-grid{grid-template-columns:1fr}.seg label{min-width:0}.cap-name{letter-spacing:.08em}.names-row{gap:10px}.couple-names{gap:14px}.eyebrow{letter-spacing:.22em}.sec-lead,.invite-text{padding:0 4px}}
+@media (max-width:620px){.families{grid-template-columns:1fr;gap:20px}.fam-amp{margin:2px 0}.grid2{grid-template-columns:1fr}.gift-grid{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}.seg label{min-width:0}.cap-name{letter-spacing:.08em}.names-row{gap:10px}.couple-names{gap:14px}.eyebrow{letter-spacing:.22em}.sec-lead,.invite-text{padding:0 4px}}
 @media (max-width:390px){.seg{flex-direction:column}}
 </style>
 </head>
@@ -397,6 +409,8 @@ button{font-family:inherit;cursor:pointer}
 
   <p class="cover-sub">Save the Date</p>
   <p class="cover-date">12 · 10 · 2025</p>
+  <!-- Điền ngày/tháng âm lịch đúng vào chỗ … (năm 2025 là năm Ất Tỵ) -->
+  <p class="cover-lunar">Nhằm ngày … tháng … năm Ất Tỵ (Âm lịch)</p>
   <p class="cover-place">Chủ Nhật · Ninh Thuận</p>
   <a class="scroll-cue" href="#invite" aria-label="Cuộn xuống">Cuộn xuống<span>˅</span></a>
 </header>
@@ -432,6 +446,18 @@ button{font-family:inherit;cursor:pointer}
       <div class="cn-person"><p class="role">Cô dâu</p><h3>Chị Dâu</h3></div>
     </div>
     <p class="couple-note">Con trai Ông bà Nguyễn Văn A &nbsp;·&nbsp; Con gái Ông bà Lê Văn C</p>
+  </div>
+</section>
+
+<!-- ===== LỜI NGỎ ===== -->
+<section class="section">
+  <div class="wrap narrow">
+    <p class="eyebrow">Lời ngỏ</p>
+    <span class="sec-title foil">Đôi lời từ chúng tôi</span>
+    <div class="letter glass">
+      <p class="letter-body">Có những điều tưởng chừng ngẫu nhiên lại hoá thành duyên phận. Sau bao tháng ngày cùng nhau đi qua nắng mưa, chúng tôi quyết định về chung một nhà, viết tiếp chặng đường phía trước bằng hai chữ "gia đình". Trong ngày trọng đại này, sự hiện diện của quý vị và các bạn chính là lời chúc phúc quý giá nhất, để chúng tôi thêm ấm áp và vững tin bước vào hành trình mới. Trân trọng và mong được đón tiếp.</p>
+      <p class="letter-sign">— Anh Cu &amp; Chị Dâu —</p>
+    </div>
   </div>
 </section>
 
@@ -486,6 +512,28 @@ button{font-family:inherit;cursor:pointer}
         <div class="ev-actions"><a class="btn btn-line" href="https://maps.google.com/?q=Phan+Rang+Ninh+Thuan" target="_blank" rel="noopener">📍 Bản đồ</a><button class="btn btn-line" data-cal="Lễ Thành Hôn|2025-10-12T17:30:00|Phan Rang, Ninh Thuận">📅 Thêm vào lịch</button></div></div>
       <div class="ev glass"><p class="kind">Lễ Tân Hôn</p><div class="hr">09:00</div><div class="dt">T2 · 13.10.2025</div><p class="venue">Tư gia nhà trai</p><p class="adr">Phan Rang, Ninh Thuận</p>
         <div class="ev-actions"><a class="btn btn-line" href="https://maps.google.com/?q=Phan+Rang+Ninh+Thuan" target="_blank" rel="noopener">📍 Bản đồ</a><button class="btn btn-line" data-cal="Lễ Tân Hôn|2025-10-13T09:00:00|Phan Rang, Ninh Thuận">📅 Thêm vào lịch</button></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LIÊN HỆ ===== -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Liên hệ</p>
+    <span class="sec-title foil">Thông tin liên hệ</span>
+    <p class="sec-lead">Mọi thắc mắc về chương trình, đường đi, xin vui lòng liên hệ:</p>
+    <div class="contact-grid">
+      <!-- Thay số điện thoại thật: sửa cả href="tel:..." và chữ hiển thị -->
+      <div class="contact-card glass">
+        <p class="c-side">Nhà trai</p>
+        <p class="c-name">Anh Cu — Chú rể</p>
+        <a class="btn btn-line" href="tel:0900000000">📞 0900 000 000</a>
+      </div>
+      <div class="contact-card glass">
+        <p class="c-side">Nhà gái</p>
+        <p class="c-name">Chị Dâu — Cô dâu</p>
+        <a class="btn btn-line" href="tel:0911111111">📞 0911 111 111</a>
+      </div>
     </div>
   </div>
 </section>

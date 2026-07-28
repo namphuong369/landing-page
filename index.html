@@ -37,13 +37,13 @@
 :root[data-theme="dark"]{ --bg1:#5c0d13;--bg2:#440a0e;--bg3:#6e0f16;--bg4:#360709 }
 :root[data-theme="light"]{ /* ngà & đỏ son */
   --bg1:#fbf3e5; --bg2:#f5e8d4; --bg3:#f1e1c8; --bg4:#efe7d2;
-  --panel:rgba(143,22,32,.06); --panel-2:rgba(255,255,255,.78);
+  --panel:rgba(143,22,32,.05); --panel-2:rgba(255,255,255,.72);
   --red:#8f1620; --red-deep:#6e0f16;
-  --gold:#8f6d1c; --gold-2:#9a7420; --gold-deep:#6e5416;
+  --gold:#b8912f; --gold-2:#d8b25a; --gold-deep:#8a6b1f;
   --cream:#8f1620;
-  --ink:#4a2016; --ink-soft:#6a4326; --line:rgba(143,110,40,.5);
-  --shadow:0 22px 55px rgba(150,90,60,.18);
-  --glow:0 0 24px rgba(184,145,47,.25);
+  --ink:#5a2318; --ink-soft:#8a5a3a; --line:rgba(184,145,47,.42);
+  --shadow:0 22px 55px rgba(150,90,60,.2);
+  --glow:0 0 24px rgba(184,145,47,.3);
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
@@ -84,13 +84,6 @@ button{font-family:inherit;cursor:pointer}
   animation:shine 6s linear infinite;
 }
 @keyframes shine{0%{background-position:180% 0}100%{background-position:-80% 0}}
-/* Mode light: foil & tên bìa dùng gam đậm để nổi trên nền ngà */
-:root[data-theme="light"] .foil{
-  background:linear-gradient(100deg,#6e1018 0%,#8a6b1f 26%,#b8912f 50%,#8a6b1f 74%,#6e1018 100%);
-  background-size:250% 100%;
-}
-:root[data-theme="light"] .cap-name{color:#7a1620;text-shadow:none}
-:root[data-theme="light"] .cd-box b{color:#8a6b1f;text-shadow:none}
 
 .eyebrow{display:block;text-align:center;font-family:var(--f-body);font-weight:500;
   letter-spacing:.44em;text-transform:uppercase;font-size:.7rem;color:var(--gold);margin-bottom:14px}

@@ -734,7 +734,7 @@ button{font-family:inherit;cursor:pointer}
     (function tick(){var df=tg-Date.now();if(df<0)df=0;D.textContent=Math.floor(df/864e5);H.textContent=p2(Math.floor(df%864e5/36e5));M.textContent=p2(Math.floor(df%36e5/6e4));S.textContent=p2(Math.floor(df%6e4/1e3));setTimeout(tick,1000);})();}
 
   /* ---- Hoa & tim rơi ---- */
-  var pe=$('#petals');if(pe&&!reduce){var gl=['💖','💗','💕','💛','🤍','🌸','🌷','✨','🌟'];
+  var pe=$('#petals');if(pe&&!reduce){var gl=['💍','💐','🕊️','🥂','💖','🌸','✨','💗','🎀'];
     setInterval(function(){if(document.hidden||(intro&&!intro.classList.contains('hide')))return;var s=document.createElement('span');s.className='petal';s.textContent=gl[Math.floor(Math.random()*gl.length)];s.style.left=Math.random()*100+'vw';s.style.fontSize=(.9+Math.random()*1.1)+'rem';var du=7+Math.random()*6;s.style.animationDuration=du+'s';pe.appendChild(s);setTimeout(function(){s.remove()},du*1000);},1100);}
 })();
 </script>

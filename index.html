@@ -170,8 +170,18 @@ button{font-family:inherit;cursor:pointer}
 .scroll-cue span{display:block;font-size:1.3rem;animation:bob 1.8s ease-in-out infinite;margin-top:4px}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
 
+/* Ảnh chụp đôi ở trang bìa */
+.cover-photo{position:relative;width:min(74vw,300px);aspect-ratio:3/4;margin:26px auto 6px;border-radius:150px 150px 14px 14px;overflow:hidden;background:linear-gradient(160deg,var(--red),var(--red-deep));border:2px solid var(--gold);box-shadow:var(--shadow),var(--glow);z-index:2}
+.cover-photo::after{content:"";position:absolute;inset:9px;border:1px solid rgba(247,231,182,.4);border-radius:142px 142px 8px 8px;pointer-events:none}
+.cover-photo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cp-corner{position:absolute;width:26px;height:26px;border:2px solid var(--gold);opacity:.95;z-index:3}
+.cp-corner.tl{top:10px;left:10px;border-right:0;border-bottom:0;border-radius:8px 0 0 0}
+.cp-corner.tr{top:10px;right:10px;border-left:0;border-bottom:0;border-radius:0 8px 0 0}
+.cp-corner.bl{bottom:10px;left:10px;border-right:0;border-top:0;border-radius:0 0 0 8px}
+.cp-corner.br{bottom:10px;right:10px;border-left:0;border-top:0;border-radius:0 0 8px 0}
+
 /* ============================================================
-   COVERFLOW — khung ảnh đôi kiểu pager
+   COVERFLOW — khung ảnh đôi kiểu pager (mục "Ảnh chúng mình")
    ============================================================ */
 .cf-wrap{margin:26px 0 6px;position:relative;z-index:2;width:100%}
 .cf{position:relative;height:clamp(360px,64vw,540px);max-width:920px;margin:0 auto;perspective:1500px}
@@ -289,7 +299,7 @@ button{font-family:inherit;cursor:pointer}
 
 .foot{text-align:center;padding:clamp(60px,9vw,100px) 0;position:relative;z-index:1}
 .foot .xi{font-family:var(--f-cjk);font-size:2.6rem;color:var(--gold-2)}
-.foot .thanks{font-family:var(--f-fancy);font-size:clamp(3rem,9vw,4.6rem);line-height:1;margin-top:6px}
+.foot .thanks{font-family:var(--f-fancy);font-size:clamp(2.3rem,7.5vw,3.8rem);line-height:1.4;margin-top:4px;padding:0 16px;overflow-wrap:anywhere}
 .foot .fnames{font-family:var(--f-serif);font-size:1.6rem;margin-top:8px;color:var(--ink)}
 .foot .tag{margin-top:14px;letter-spacing:.12em;color:var(--gold)}
 .share{display:flex;gap:12px;justify-content:center;margin-top:28px;flex-wrap:wrap}
@@ -359,17 +369,10 @@ button{font-family:inherit;cursor:pointer}
     <svg class="swal r" viewBox="0 0 100 60" fill="currentColor" aria-hidden="true"><path d="M50 30 C40 18 22 12 4 14 C22 20 34 26 44 34 C30 34 16 40 8 50 C24 44 40 40 50 44 C60 40 76 44 92 50 C84 40 70 34 56 34 C66 26 78 20 96 14 C78 12 60 18 50 30 Z"/></svg>
   </div>
 
-  <div class="cf-wrap">
-    <div class="cf" id="cf">
-      <button class="cf-nav prev" id="cfPrev" aria-label="Ảnh trước">‹</button>
-      <div class="cf-card"><div class="cf-ph"><span class="xi">囍</span><small>Ảnh 1</small></div></div>
-      <div class="cf-card"><div class="cf-ph"><span class="xi">囍</span><small>Ảnh 2</small></div></div>
-      <div class="cf-card"><div class="cf-ph"><span class="xi">囍</span><small>Ảnh cưới</small></div></div>
-      <div class="cf-card"><div class="cf-ph"><span class="xi">囍</span><small>Ảnh 4</small></div></div>
-      <div class="cf-card"><div class="cf-ph"><span class="xi">囍</span><small>Ảnh 5</small></div></div>
-      <button class="cf-nav next" id="cfNext" aria-label="Ảnh sau">›</button>
-    </div>
-    <div class="cf-dots" id="cfDots"></div>
+  <div class="cover-photo">
+    <span class="cp-corner tl"></span><span class="cp-corner tr"></span><span class="cp-corner bl"></span><span class="cp-corner br"></span>
+    <!-- Thay ảnh thật: <img src="anh-cuoi-doi.jpg" alt="Ảnh cưới"> rồi xoá .cf-ph -->
+    <div class="cf-ph"><span class="xi">囍</span><small>Ảnh cưới</small></div>
   </div>
 
   <p class="cover-sub">Save the Date</p>
@@ -409,6 +412,26 @@ button{font-family:inherit;cursor:pointer}
       <div class="cn-person"><p class="role">Cô dâu</p><h3>Trần Thanh Hà</h3></div>
     </div>
     <p class="couple-note">Con trai Ông bà Nguyễn Văn A &nbsp;·&nbsp; Con gái Ông bà Lê Văn C</p>
+  </div>
+</section>
+
+<!-- ===== ẢNH CHÚNG MÌNH (coverflow) ===== -->
+<section class="section" id="photos">
+  <div class="wrap">
+    <p class="eyebrow">Khoảnh khắc</p>
+    <span class="sec-title foil">Ảnh chúng mình</span>
+    <div class="cf-wrap">
+      <div class="cf" id="cf">
+        <button class="cf-nav prev" id="cfPrev" aria-label="Ảnh trước">‹</button>
+        <div class="cf-card"><div class="cf-ph"><span class="xi">囍</span><small>Ảnh 1</small></div></div>
+        <div class="cf-card"><div class="cf-ph"><span class="xi">囍</span><small>Ảnh 2</small></div></div>
+        <div class="cf-card"><div class="cf-ph"><span class="xi">囍</span><small>Ảnh cưới</small></div></div>
+        <div class="cf-card"><div class="cf-ph"><span class="xi">囍</span><small>Ảnh 4</small></div></div>
+        <div class="cf-card"><div class="cf-ph"><span class="xi">囍</span><small>Ảnh 5</small></div></div>
+        <button class="cf-nav next" id="cfNext" aria-label="Ảnh sau">›</button>
+      </div>
+      <div class="cf-dots" id="cfDots"></div>
+    </div>
   </div>
 </section>
 
@@ -663,7 +686,7 @@ button{font-family:inherit;cursor:pointer}
     (function tick(){var df=tg-Date.now();if(df<0)df=0;D.textContent=Math.floor(df/864e5);H.textContent=p2(Math.floor(df%864e5/36e5));M.textContent=p2(Math.floor(df%36e5/6e4));S.textContent=p2(Math.floor(df%6e4/1e3));setTimeout(tick,1000);})();}
 
   /* ---- Hoa & tim rơi ---- */
-  var pe=$('#petals');if(pe&&!reduce){var gl=['💖','💕','❤️','🌸','🌷','🏮','❁','🍃','✨'];
+  var pe=$('#petals');if(pe&&!reduce){var gl=['💖','💗','💕','💛','🤍','🌸','🌷','✨','🌟'];
     setInterval(function(){if(document.hidden||(intro&&!intro.classList.contains('hide')))return;var s=document.createElement('span');s.className='petal';s.textContent=gl[Math.floor(Math.random()*gl.length)];s.style.left=Math.random()*100+'vw';s.style.fontSize=(.9+Math.random()*1.1)+'rem';var du=7+Math.random()*6;s.style.animationDuration=du+'s';pe.appendChild(s);setTimeout(function(){s.remove()},du*1000);},1100);}
 })();
 </script>
